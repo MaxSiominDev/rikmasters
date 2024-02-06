@@ -29,7 +29,6 @@ private const val MIN_DRAG_AMOUNT = -18
 @Composable
 fun CameraCard(
     camera: CameraModel,
-    //cardHeight: Dp,
     isRevealed: Boolean,
     cardOffset: Float,
     onExpand: () -> Unit,
@@ -41,13 +40,6 @@ fun CameraCard(
         }
     }
     val transition = updateTransition(transitionState, "cardTransition")
-    /*val cardBgColor by transition.animateColor(
-        label = "cardBgColorTransition",
-        transitionSpec = { tween(durationMillis = ANIMATION_DURATION) },
-        targetValueByState = {
-            if (isRevealed) Color.Yellow else Color.Red
-        }
-    )*/
 
     val offsetTransition by transition.animateFloat(
         label = "cardOffsetTransition",
@@ -59,7 +51,6 @@ fun CameraCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp)
-            //.height(cardHeight)
             .offset { IntOffset(offsetTransition.roundToInt(), 0) }
             .pointerInput(Unit) {
                 detectHorizontalDragGestures { _, dragAmount ->

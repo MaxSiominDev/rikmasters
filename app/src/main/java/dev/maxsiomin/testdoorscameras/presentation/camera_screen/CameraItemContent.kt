@@ -31,12 +31,12 @@ fun CameraItemContent(camera: CameraModel) {
 
     Column {
         Box {
-            val snapshot = camera.snapshot
+            val snapshot = "https://maxsiomin.dev/api/apps/rikmasters/camera-snapshot.png"//camera.snapshot
             AsyncImage(
                 modifier = Modifier
                     .height(200.dp)
                     .fillMaxWidth(),
-                model = camera.snapshot,
+                model = snapshot,
                 contentDescription = "${camera.name} snapshot",
             )
 
