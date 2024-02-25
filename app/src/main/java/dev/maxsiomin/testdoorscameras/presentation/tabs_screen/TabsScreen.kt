@@ -22,6 +22,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -42,7 +43,9 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalPagerApi::class, ExperimentalMaterialApi::class)
 @Composable
-fun TabScreen(isOnlyTabsPreview: Boolean = false) {
+fun TabScreen() {
+
+    val isPreview = LocalInspectionMode.current
 
     var tabIndex by remember { mutableIntStateOf(0) }
 
@@ -56,7 +59,7 @@ fun TabScreen(isOnlyTabsPreview: Boolean = false) {
 
     val viewModel = when {
 
-        isOnlyTabsPreview -> viewModel<FakePullRefresherViewModel>()
+        isPreview -> viewModel<FakePullRefresherViewModel>()
 
         tabIndex == 0 -> {
             hiltViewModel<CameraViewModel>()
@@ -118,7 +121,7 @@ fun TabScreen(isOnlyTabsPreview: Boolean = false) {
                 }
             }
 
-            if (isOnlyTabsPreview) return@Column
+            if (isPreview) return@Column
             when (tabIndex) {
 
                 0 -> {
@@ -153,5 +156,5 @@ fun TabScreen(isOnlyTabsPreview: Boolean = false) {
 @Preview
 @Composable
 fun TabsPreview() {
-    TabScreen(isOnlyTabsPreview = true)
+    TabScreen()
 }
