@@ -29,10 +29,6 @@ fun CameraScreen(
     onEvent: (CameraViewModel.Event) -> Unit,
 ) {
 
-    //val viewModel = hiltViewModel<CameraViewModel>()
-    //val cards by viewModel.cameras.collectAsStateWithLifecycle()
-    //val revealedCardIds by viewModel.revealedCamerasIdsList.collectAsStateWithLifecycle()
-
     Box(modifier = Modifier.background(
         brush = Brush.verticalGradient(
             colors = listOf(
@@ -63,7 +59,6 @@ fun CameraScreen(
                             CameraCard(
                                 camera = camera,
                                 isRevealed = revealedCardIds.contains(camera.id),
-                                //cardHeight = if (camera.hasRoom()) CARD_WITH_ROOM_HEIGHT.dp else CARD_HEIGHT.dp,
                                 cardOffset = CARD_OFFSET.Dp(),
                                 onExpand = { onEvent(CameraViewModel.Event.ItemExpanded(camera.id)) },
                                 onCollapse = { onEvent(CameraViewModel.Event.ItemCollapsed(camera.id)) },
@@ -78,6 +73,4 @@ fun CameraScreen(
 
 }
 
-const val CARD_HEIGHT = 220
-const val CARD_WITH_ROOM_HEIGHT = 280
 private const val CARD_OFFSET = -60f

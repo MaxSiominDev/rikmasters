@@ -47,8 +47,6 @@ fun DoorItemContent(door: DoorModel) {
                 fontSize = 19.sp,
             )
 
-            //Spacer(Modifier.weight(1f).fillMaxHeight().background(Color.Green))
-
             Icon(
                 modifier = Modifier.padding(horizontal = 30.dp),
                 imageVector = Icons.Outlined.Lock,
