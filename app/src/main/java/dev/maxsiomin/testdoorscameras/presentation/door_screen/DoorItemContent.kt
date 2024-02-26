@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -30,6 +31,7 @@ fun DoorItemContent(door: DoorModel) {
                     .height(200.dp)
                     .fillMaxWidth(),
                 model = door.snapshot,
+                contentScale = ContentScale.FillBounds,
                 contentDescription = "${door.name} snapshot",
             )
         }

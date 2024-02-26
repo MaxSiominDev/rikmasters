@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -31,12 +32,13 @@ fun CameraItemContent(camera: CameraModel) {
 
     Column {
         Box {
-            val snapshot = "https://maxsiomin.dev/api/apps/rikmasters/camera-snapshot.png"//camera.snapshot
+            val snapshot = camera.snapshot
             AsyncImage(
                 modifier = Modifier
                     .height(200.dp)
                     .fillMaxWidth(),
                 model = snapshot,
+                contentScale = ContentScale.FillBounds,
                 contentDescription = "${camera.name} snapshot",
             )
 
