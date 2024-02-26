@@ -2,8 +2,6 @@ package dev.maxsiomin.testdoorscameras.data.remote
 
 import dev.maxsiomin.testdoorscameras.data.remote.dto.CameraResponse
 import dev.maxsiomin.testdoorscameras.data.remote.dto.DoorResponse
-import dev.maxsiomin.testdoorscameras.domain.CameraModel
-import dev.maxsiomin.testdoorscameras.util.Resource
 
 interface CamerasApi {
 

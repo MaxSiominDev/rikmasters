@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -67,20 +68,17 @@ fun CameraItemContent(camera: CameraModel) {
         )
     }
 
-
 }
 
 @Composable
 fun DotAndRec() {
     Row(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
         val color = Color(0xFFE52C2C)
-        Box(
+        Spacer(
             Modifier
                 .background(color = color, shape = CircleShape)
                 .size(4.dp)
-        ) {
-            Text(text = "")
-        }
+        )
 
         Text(text = "REC", color = color)
     }
