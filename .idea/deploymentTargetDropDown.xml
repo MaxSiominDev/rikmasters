@@ -15,23 +15,7 @@
               </deviceKey>
             </Target>
           </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-02-26T12:38:24.827990600Z" />
-        </State>
-      </entry>
-      <entry key="rikmasters.TestDoorsCameras.app">
-        <State>
-          <targetSelectedWithDropDown>
-            <Target>
-              <type value="QUICK_BOOT_TARGET" />
-              <deviceKey>
-                <Key>
-                  <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\Maxim\.android\avd\Resizable_Experimental_API_34_2.avd" />
-                </Key>
-              </deviceKey>
-            </Target>
-          </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-02-26T12:38:04.795690100Z" />
+          <timeTargetWasSelectedWithDropDown value="2024-03-01T15:01:55.814459800Z" />
         </State>
       </entry>
     </value>
