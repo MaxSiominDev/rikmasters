@@ -4,6 +4,16 @@
 
 Это проект - тестовое задание. Это простое приложение, которое подключается к API для получения списка камер и дверей, имитируя управление этими устройствами. В приложении пользователи могут добавлять камеры и двери в избранное и редактировать названия. Этот проект предназначен исключительно для демонстрации моих навыков и не предназначен для реального использования.
 
+## Стек проекта
+
+Проект создан с помощью:
+
+- **Programming Language**: Kotlin
+- **UI Framework**: Jetpack Compose
+- **Database**: Realm
+- **Network requests**: Ktor
+- **Dependency Injection**: Hilt
+
 ## Скриншоты
 
 Функции приложения на видео:
@@ -34,6 +44,16 @@ git clone https://github.com/MaxSiominDev/rikmasters
 ## Description
 
 Rikmasters is a test assignment created for a company evaluation process. It's a basic application that connects to an API to retrieve a list of cameras and doors, simulating control over these devices. Within the app, users have the ability to add cameras and doors to their favorites and edit the names of any door. This project is intended purely for demonstrating coding skills and is not designed for real-world application.
+
+## Technology Stack
+
+This project was built using the following technologies:
+
+- **Programming Language**: Kotlin
+- **UI Framework**: Jetpack Compose
+- **Database**: Realm
+- **Network requests**: Ktor
+- **Dependency Injection**: Hilt
 
 ## Screenshots
 
