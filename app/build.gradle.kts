@@ -71,13 +71,13 @@ dependencies {
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.compose.runtime)
 
-    // If once I decide to write some tests, something seems to be wrong with these dependencies, better examine
     testImplementation(libs.junit)
-    debugImplementation(libs.androidx.junit)
-    debugImplementation(libs.androidx.espresso.core)
-    debugImplementation(libs.androidx.compose.ui.test.junit4)
-    debugImplementation(libs.androidx.compose.ui.tooling)
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    androidTestImplementation(libs.androidx.compose.ui.tooling)
+    androidTestImplementation(libs.androidx.compose.ui.test.manifest)
 
     // Realm
     implementation(libs.library.base)
