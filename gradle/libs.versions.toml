@@ -2,22 +2,24 @@
 accompanistPager = "0.17.0"
 accompanistSwiperefresh = "0.33.1-alpha"
 activityCompose = "1.8.2"
-coil = "2.4.0"
+coil = "2.6.0"
 coreKtx = "1.12.0"
 espressoCore = "3.5.1"
-hiltAndroid = "2.50"
+hiltAndroid = "2.51"
 hiltNavigationCompose = "1.2.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
-ktorVersion = "1.6.4"
-kotlinxSerializationJson = "1.5.1"
-kotlinxCoroutinesCore = "1.7.3"
+ktorVersion = "2.3.9"
+ktorClientContentNegotiation = "2.3.9"
+ktorSerializationKotlinxJson = "2.3.9"
+kotlinxSerializationJson = "1.6.3"
+kotlinxCoroutinesCore = "1.8.0"
 libraryBase = "1.10.2"
 lifecycleRuntimeKtx = "2.7.0"
 timber = "5.0.1"
-compose-bom = "2024.02.01"
+compose-bom = "2024.02.02"
 agp = "8.3.0"
-kotlinVersion = "1.8.21"
+kotlinVersion = "1.9.22"
 realmVersion = "1.10.0"
 
 [libraries]
@@ -42,6 +44,8 @@ ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "k
 ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktorVersion" }
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorVersion" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorVersion" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClientContentNegotiation" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorSerializationKotlinxJson" }
 library-base = { module = "io.realm.kotlin:library-base", version.ref = "libraryBase" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }

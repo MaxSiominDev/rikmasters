@@ -13,8 +13,8 @@ import dev.maxsiomin.testdoorscameras.domain.repository.Repository
 import dev.maxsiomin.testdoorscameras.util.isDebug
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.android.Android
-import io.ktor.client.features.json.JsonFeature
-import io.ktor.client.features.json.serializer.KotlinxSerializer
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.serialization.kotlinx.json.json
 import io.realm.kotlin.Realm
 import io.realm.kotlin.RealmConfiguration
 import javax.inject.Singleton
@@ -37,8 +37,8 @@ object AppModule {
     @Provides
     fun provideHttpClient(): HttpClient {
         return HttpClient(Android) {
-            install(JsonFeature) {
-                serializer = KotlinxSerializer()
+            install(ContentNegotiation) {
+                json()
             }
         }
     }

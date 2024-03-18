@@ -2,11 +2,11 @@ package dev.maxsiomin.testdoorscameras.data.remote
 
 import dev.maxsiomin.testdoorscameras.data.remote.dto.CameraResponse
 import dev.maxsiomin.testdoorscameras.data.remote.dto.DoorResponse
-import dev.maxsiomin.testdoorscameras.domain.CameraModel
 import io.ktor.client.HttpClient
-import io.ktor.client.features.ClientRequestException
-import io.ktor.client.features.RedirectResponseException
-import io.ktor.client.features.ServerResponseException
+import io.ktor.client.call.body
+import io.ktor.client.plugins.ClientRequestException
+import io.ktor.client.plugins.RedirectResponseException
+import io.ktor.client.plugins.ServerResponseException
 import io.ktor.client.request.get
 import io.ktor.client.request.url
 import timber.log.Timber
@@ -20,7 +20,7 @@ class CamerasApiImpl @Inject constructor(
         try {
             val response: CameraResponse? = client.get  {
                 url(HttpRoutes.GET_CAMERAS)
-            }
+            }.body()
             if (response == null) {
                 Timber.e("Response is null")
                 return ResponseWithMessage(null, Exception("Response is null"))
@@ -45,7 +45,7 @@ class CamerasApiImpl @Inject constructor(
         try {
             val response: DoorResponse? = client.get  {
                 url(HttpRoutes.GET_DOORS)
-            }
+            }.body()
             if (response == null) {
                 Timber.e("Response is null")
                 return ResponseWithMessage(null, Exception("Response is null"))
