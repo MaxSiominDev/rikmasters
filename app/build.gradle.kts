@@ -97,6 +97,7 @@ dependencies {
     implementation(libs.ktor.client.logging)
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(libs.kotlinx.serialization.json)
 
     implementation(libs.timber)
 
@@ -106,7 +107,7 @@ dependencies {
 
     implementation(libs.androidx.lifecycle.runtime.compose)
 
-    implementation(libs.kotlinx.serialization.json)
+
 
     // Image loading
     // Updating to 2.5.0 caused crashes

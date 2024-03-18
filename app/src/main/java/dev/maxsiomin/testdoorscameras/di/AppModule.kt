@@ -26,11 +26,12 @@ object AppModule {
     @Provides
     @Singleton
     fun provideRealmDatabase(): Realm {
-        val configuration = RealmConfiguration.Builder(setOf(CameraEntity::class, DoorEntity::class)).apply {
-            if (isDebug()) {
-                deleteRealmIfMigrationNeeded()
-            }
-        }.build()
+        val configuration =
+            RealmConfiguration.Builder(setOf(CameraEntity::class, DoorEntity::class)).apply {
+                if (isDebug()) {
+                    deleteRealmIfMigrationNeeded()
+                }
+            }.build()
         return Realm.open(configuration)
     }
 
@@ -45,14 +46,10 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideCamerasApi(client: HttpClient): CamerasApi {
-        return CamerasApiImpl(client)
-    }
+    fun provideCamerasApi(impl: CamerasApiImpl): CamerasApi = impl
 
     @Provides
     @Singleton
-    fun provideRepo(camerasApi: CamerasApi, realm: Realm): Repository {
-        return RepositoryImpl(camerasApi, realm)
-    }
+    fun provideRepo(impl: RepositoryImpl): Repository = impl
 
 }
