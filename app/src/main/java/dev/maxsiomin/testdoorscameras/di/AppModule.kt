@@ -34,15 +34,18 @@ object AppModule {
         return Realm.open(configuration)
     }
 
-
     @Provides
-    @Singleton
-    fun provideCamerasApi(): CamerasApi {
-        val client = HttpClient(Android) {
+    fun provideHttpClient(): HttpClient {
+        return HttpClient(Android) {
             install(JsonFeature) {
                 serializer = KotlinxSerializer()
             }
         }
+    }
+
+    @Provides
+    @Singleton
+    fun provideCamerasApi(client: HttpClient): CamerasApi {
         return CamerasApiImpl(client)
     }
 
