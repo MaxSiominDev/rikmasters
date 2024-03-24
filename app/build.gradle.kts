@@ -111,7 +111,7 @@ dependencies {
 
     // Image loading
     // Updating to 2.5.0 caused crashes
-    implementation(libs.coil)
+    //implementation(libs.coil)
     implementation(libs.coil.compose)
 
     // Pull to refresh
